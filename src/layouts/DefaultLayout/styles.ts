@@ -1,14 +1,14 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export const LayoutContaienr = styled.div`
-    max-width: 118.4rem;
-    height: calc(100vh - 10rem);
-    margin: 8rem auto;
-    padding: 4rem;
+export const LayoutContainer = styled.div`
+  max-width: 74rem;
+  height: calc(100vh - 10rem);
+  margin: 5rem auto;
+  padding: 2.5rem;
 
-    background-color: ${(props) => props.theme.color['gray-800']};
-    border-radius: 0.8px;
+  background: ${(props) => props.theme.color['gray-800']};
+  border-radius: 8px;
 
-    display: flex;
-    flex-direction: column;
-`;
+  display: flex;
+  flex-direction: column;
+`

@@ -8,7 +8,7 @@ export const HistoryContainer = styled.main`
   flex-direction: column;
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: ${(props) => props.theme.color['gray-100']};
   }
 `
@@ -23,15 +23,12 @@ export const HistoryList = styled.div`
     border-collapse: collapse;
     min-width: 600px;
 
-    th, td {
-      font-size: 1.4rem;
-    }
-
     th {
       background-color: ${(props) => props.theme.color['gray-600']};
       padding: 1rem;
       text-align: left;
       color: ${(props) => props.theme.color['gray-100']};
+      font-size: 0.875rem;
       line-height: 1.6;
 
       &:first-child {
@@ -49,6 +46,7 @@ export const HistoryList = styled.div`
       background-color: ${(props) => props.theme.color['gray-700']};
       border-top: 4px solid ${(props) => props.theme.color['gray-800']};
       padding: 1rem;
+      font-size: 0.875rem;
       line-height: 1.6;
 
       &:first-child {

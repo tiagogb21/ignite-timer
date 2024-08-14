@@ -1,72 +1,56 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HomeContainer = styled.main`
-    flex: 1;
+  flex: 1;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 3.5rem;
+  }
+`
 
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5.6rem;
+export const BaseCountdownButton = styled.button`
+  width: 100%;
+  border: 0;
+  padding: 1rem;
+  border-radius: 8px;
 
-        label,
-        span,
-        input {
-            font-size: 1.6rem;
-        }
-    }
-`;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${(props) => props.theme.color['gray-100']};
 
-export const FormContainer = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    color: ${(props) => props.theme.color["gray-100"]};
-    font-size: 1.8rem;
-    font-weight: bold;
-    flex-wrap: wrap;
-`;
+  gap: 0.5rem;
+  font-weight: bold;
 
-export const CountdownContainer = styled.div`
-    width: 100%;
+  cursor: pointer;
 
-    font-family: "Roboto Mono", sans-serif;
-    font-size: 16rem;
-    line-height: 13rem;
-    color: ${(props) => props.theme.color["gray-100"]};
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+`
 
-    display: flex;
-    gap: 1.6rem;
+export const StartCountdownButton = styled(BaseCountdownButton)`
+  background: ${(props) => props.theme.color['green-500']};
+  color: ${(props) => props.theme.color['gray-100']};
 
-    span {
-        background-color: ${(props) => props.theme.color["gray-700"]};
-        padding: 3.2rem 1.6rem;
-        border-radius: 8px;
-        display: block;
-        text-align: center;
-        flex: 1;
-    }
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme.color['green-700']};
+  }
+`
 
-    .text-lg {
-        font-size: 8rem;
-    }
-`;
+export const StopCountdownButton = styled(BaseCountdownButton)`
+  background: ${(props) => props.theme.color['red-500']};
 
-export const Separator = styled.div`
-    padding: 3.2 rem 0;
-    color: ${(props) => props.theme.color["green-500"]};
-
-    width: 6.4rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-
-    font-size: 15rem;
-`;
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme.color['red-700']};
+  }
+`
