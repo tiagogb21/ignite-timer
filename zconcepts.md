@@ -87,3 +87,13 @@ js NÃO consegue ler objetos ts, apenas a tipagem do objeto
 --> Podemos indicar o tipo de valor que será recebido:
 
     {...register("minutesAmount", { valueAsNumber: true })}
+
+
+Eu quero que a variável de minutos comece com 0 caso a primeira casa não seja preenchida
+
+    const minutes = String(minutesAmount).padStart(2, '0')
+
+    --> Estou informando: caso não tenha 2 caracteres, preencha no início com '0'
+
+
+useEffect --> Side-effect --> Efeito Colateral - uma ação que acontece devido a uma ação anterior
